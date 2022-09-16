@@ -1,0 +1,73 @@
+\documentclass[man]{apa7}
+\documentclass[man]{apa7}
+
+% Use Times New Roman
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% American formatting guidelines
+\usepackage[american]{babel}
+
+% Setup citations and bibliography
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber,natbib=true]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{references.bib}
+
+% For math
+\usepackage{amsmath} 
+
+% For tables
+\usepackage{booktabs}
+\usepackage{rotating}
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+% Setup latexdiff formatting for resubmission
+\providecommand{\DIFdel}[1]{} % Don't show deleted text
+\providecommand{\DIFadd}[1]{{\color{blue}#1}}
+
+% Hide boxes around hyperlinks
+\hypersetup{hidelinks}
+
+% Use endnotes
+\usepackage{endnotes}
+\renewcommand{\notesname}{Notes}
+\let\footnote=\endnote
+
+% Add blank space at the bottom of the page instead of between paragraphs
+\raggedbottom
+
+%% Paper metadata
+\title{Title}
+\shorttitle{Short Title}
+
+\authorsnames[1]{Author}
+\authorsaffiliations{Affiliation}
+
+\leftheader{Left Header}
+
+\abstract{Abstract}
+
+\keywords{Keywords}
+
+\authornote{
+Notes
+}
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\pagenumbering{arabic}
+
+Main document
+
+% Print endnotes
+\begingroup
+\parindent 0pt
+\def\enotesize{\normalsize}
+\theendnotes
+\endgroup
+
+% Print reference list
+\printbibliography
+
+\end{document}
