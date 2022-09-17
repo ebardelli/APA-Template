@@ -1,8 +1,9 @@
 \documentclass[man]{apa7}
 
-% Use Times New Roman
+% Use Times New Roman. Select TeX Gyre Termes if TNR is not available on the system
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+%\setmainfont{Times New Roman}
+\setmainfont{TeX Gyre Termes}
 
 % American formatting guidelines
 \usepackage[american]{babel}
@@ -36,22 +37,22 @@
 % Add blank space at the bottom of the page instead of between paragraphs
 \raggedbottom
 
-%% Paper metadata
-\title{Title}
+% Paper metadata
+\title{Full Title}
 \shorttitle{Short Title}
 
 \authorsnames[1, 2]{Author, Author2}
 \authorsaffiliations{Affiliation1, Affiliation2}
 
-\leftheader{Left Header}
+\authornote{
+Acknowledgments and other notes.
+}
 
-\abstract{Abstract}
+\abstract{
+Abstract
+}
 
 \keywords{Keywords}
-
-\authornote{
-Notes
-}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -59,6 +60,8 @@ Notes
 \pagenumbering{arabic}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur arcu a enim auctor porta. Donec sed nunc felis. Phasellus gravida sem sed ante faucibus sagittis. Phasellus pretium urna vel scelerisque feugiat. Nam metus tortor, rutrum non arcu lobortis, placerat imperdiet nisi. Aenean lectus orci, aliquet sed condimentum in, convallis at magna. Duis et turpis posuere, aliquam dui eget, pretium velit.\footnote{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices leo quis aliquet hendrerit. Aliquam vitae porta massa, vel commodo metus. Curabitur commodo id quam ut fermentum. Sed lectus mauris, tincidunt quis elit eu, aliquet fermentum quam. Donec sapien neque, condimentum a tempus et, ultrices nec nulla. Integer varius mauris ac nulla iaculis scelerisque. Phasellus vitae velit nec felis imperdiet volutpat.}
+
+\section{Section}
 
 Nulla facilisi. Curabitur lorem mi, aliquet id mollis in, scelerisque posuere odio. Curabitur lorem lorem, pretium non elementum non, ultrices eget ex. Sed ut tempus urna. Praesent nisl est, molestie vitae laoreet sit amet, porttitor id dui. Phasellus libero orci, laoreet sit amet mi id, varius sagittis leo. In odio urna, vulputate quis neque sit amet, tincidunt rhoncus eros. Duis quis enim velit \citep{hawking1988}.
 
