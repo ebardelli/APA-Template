@@ -1,5 +1,4 @@
 \documentclass[man]{apa7}
-\documentclass[man]{apa7}
 
 % Use Times New Roman
 \usepackage{fontspec}
@@ -7,6 +6,7 @@
 
 % American formatting guidelines
 \usepackage[american]{babel}
+\usepackage{csquotes}
 
 % Setup citations and bibliography
 \usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber,natbib=true]{biblatex}
@@ -14,7 +14,7 @@
 \addbibresource{references.bib}
 
 % For math
-\usepackage{amsmath} 
+\usepackage{amsmath}
 
 % For tables
 \usepackage{booktabs}
@@ -40,8 +40,8 @@
 \title{Title}
 \shorttitle{Short Title}
 
-\authorsnames[1]{Author}
-\authorsaffiliations{Affiliation}
+\authorsnames[1, 2]{Author, Author2}
+\authorsaffiliations{Affiliation1, Affiliation2}
 
 \leftheader{Left Header}
 
@@ -58,7 +58,30 @@ Notes
 \maketitle
 \pagenumbering{arabic}
 
-Main document
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur arcu a enim auctor porta. Donec sed nunc felis. Phasellus gravida sem sed ante faucibus sagittis. Phasellus pretium urna vel scelerisque feugiat. Nam metus tortor, rutrum non arcu lobortis, placerat imperdiet nisi. Aenean lectus orci, aliquet sed condimentum in, convallis at magna. Duis et turpis posuere, aliquam dui eget, pretium velit.\footnote{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices leo quis aliquet hendrerit. Aliquam vitae porta massa, vel commodo metus. Curabitur commodo id quam ut fermentum. Sed lectus mauris, tincidunt quis elit eu, aliquet fermentum quam. Donec sapien neque, condimentum a tempus et, ultrices nec nulla. Integer varius mauris ac nulla iaculis scelerisque. Phasellus vitae velit nec felis imperdiet volutpat.}
+
+Nulla facilisi. Curabitur lorem mi, aliquet id mollis in, scelerisque posuere odio. Curabitur lorem lorem, pretium non elementum non, ultrices eget ex. Sed ut tempus urna. Praesent nisl est, molestie vitae laoreet sit amet, porttitor id dui. Phasellus libero orci, laoreet sit amet mi id, varius sagittis leo. In odio urna, vulputate quis neque sit amet, tincidunt rhoncus eros. Duis quis enim velit \citep{hawking1988}.
+
+Curabitur mollis arcu vitae tortor convallis interdum. Sed volutpat est nulla, sit amet vestibulum velit elementum vel. Maecenas at metus non ipsum varius commodo in sit amet lectus. In pretium justo viverra, congue urna id, eleifend nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sed dolor vel orci feugiat pellentesque scelerisque ut est. Aenean sit amet vestibulum elit. Aenean interdum dolor ac suscipit mattis. Nunc varius id mi id convallis. Fusce cursus ornare interdum. In eget lectus neque. Nullam ut ex mi.
+
+Nam ultrices eu felis vel fringilla. Vestibulum pellentesque sem urna, eu fringilla quam sodales a. Vivamus suscipit sapien sit amet massa ultrices lacinia. Maecenas ac dignissim purus. Vivamus bibendum, felis semper consequat fringilla, nisi libero consequat eros, vitae varius justo libero feugiat mauris. Duis congue, ipsum et laoreet ultrices, tellus elit facilisis mi, at eleifend est ante nec dui. Quisque et pharetra magna, ac lobortis dolor. Aenean interdum quam vitae egestas venenatis. Mauris facilisis lacus eu lorem molestie rutrum. Vivamus porta dui vel sagittis bibendum. Nulla ullamcorper libero nec mauris convallis, a imperdiet odio congue. In dignissim ligula eget turpis finibus, in bibendum diam convallis. Duis pulvinar enim non dolor ornare consectetur. Mauris laoreet erat et massa suscipit, a faucibus neque eleifend. Fusce nec tellus a leo maximus imperdiet (Tabula \ref{tab:table1}).
+
+\begin{table}
+	\begin{center}
+		\caption{Your first table.}
+		\label{tab:table1}
+		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+			$\alpha$ & $\beta$ & $\gamma$ \\
+			\hline
+			1 & 1110.1 & a\\
+			2 & 10.1 & b\\
+			3 & 23.113231 & c\\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Integer sed ultricies ipsum. Cras et congue nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat neque in lacus molestie, ut ultrices ante dignissim. Donec efficitur dolor quis elit pharetra, quis suscipit metus tincidunt. Mauris ullamcorper auctor arcu, at vulputate enim sagittis eu. Suspendisse iaculis dui vitae velit gravida, at consequat tellus ultrices. Nulla lobortis odio id mauris volutpat, sed consectetur velit rutrum. Suspendisse vitae ullamcorper ante. In ultricies orci at ex sagittis rhoncus. Aenean mi mauris, aliquet ac lobortis non, posuere et ex. Nam et lacus non orci egestas porttitor vitae eget turpis. Donec eget enim magna. Maecenas sed eros tortor.
 
 % Print endnotes
 \begingroup
