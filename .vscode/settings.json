@@ -1,4 +1,10 @@
 {
 	"latex-workshop.latex.outDir": "%DIR%/build",
-	"latex-workshop.latex.recipe.default": "lastUsed"
+	"latex-workshop.latex.recipe.default": "lastUsed",
+	"editor.formatOnSave": true,
+	"editor.wordWrap": "on",
+	"latex-workshop.latex.outDir": "%DIR%/build",
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.docker.enabled": true,
+	"latex-workshop.docker.image.latex": "ghcr.io/xu-cheng/texlive-full"
 }
