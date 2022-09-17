@@ -65,14 +65,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consectetur arcu 
 
 Nulla facilisi. Curabitur lorem mi, aliquet id mollis in, scelerisque posuere odio. Curabitur lorem lorem, pretium non elementum non, ultrices eget ex. Sed ut tempus urna. Praesent nisl est, molestie vitae laoreet sit amet, porttitor id dui. Phasellus libero orci, laoreet sit amet mi id, varius sagittis leo. In odio urna, vulputate quis neque sit amet, tincidunt rhoncus eros. Duis quis enim velit \citep{hawking1988}.
 
-Curabitur mollis arcu vitae tortor convallis interdum. Sed volutpat est nulla, sit amet vestibulum velit elementum vel. Maecenas at metus non ipsum varius commodo in sit amet lectus. In pretium justo viverra, congue urna id, eleifend nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sed dolor vel orci feugiat pellentesque scelerisque ut est. Aenean sit amet vestibulum elit. Aenean interdum dolor ac suscipit mattis. Nunc varius id mi id convallis. Fusce cursus ornare interdum. In eget lectus neque. Nullam ut ex mi.
+Curabitur mollis arcu vitae tortor convallis interdum. Sed volutpat est nulla, sit amet vestibulum velit elementum vel. Maecenas at metus non ipsum varius commodo in sit amet lectus. In pretium justo viverra, congue urna id, eleifend nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sed dolor vel orci feugiat pellentesque scelerisque ut est. Aenean sit amet vestibulum elit. Aenean interdum dolor ac suscipit mattis. Nunc varius id mi id convallis. Fusce cursus ornare interdum. In eget lectus neque. Nullam ut ex mi (Table \ref{tab:DeckedTable}).
 
-Nam ultrices eu felis vel fringilla. Vestibulum pellentesque sem urna, eu fringilla quam sodales a. Vivamus suscipit sapien sit amet massa ultrices lacinia. Maecenas ac dignissim purus. Vivamus bibendum, felis semper consequat fringilla, nisi libero consequat eros, vitae varius justo libero feugiat mauris. Duis congue, ipsum et laoreet ultrices, tellus elit facilisis mi, at eleifend est ante nec dui. Quisque et pharetra magna, ac lobortis dolor. Aenean interdum quam vitae egestas venenatis. Mauris facilisis lacus eu lorem molestie rutrum. Vivamus porta dui vel sagittis bibendum. Nulla ullamcorper libero nec mauris convallis, a imperdiet odio congue. In dignissim ligula eget turpis finibus, in bibendum diam convallis. Duis pulvinar enim non dolor ornare consectetur. Mauris laoreet erat et massa suscipit, a faucibus neque eleifend. Fusce nec tellus a leo maximus imperdiet (Tabula \ref{tab:table1}).
+\begin{table}
+	\begin{threeparttable}
+	  \caption{A More Complex Decked Table}
+	  \label{tab:DeckedTable}
+	  \begin{tabular}{@{}lrrr@{}}
+	  \toprule
+	  Distribution type  & \multicolumn{2}{l}{Percentage of} & Total number   \\
+						 & \multicolumn{2}{l}{targets with}  & of trials per  \\
+						 & \multicolumn{2}{l}{segment in}    & participant    \\ \cmidrule(r){2-3}
+									  &  Onset  &  Coda            &          \\ \midrule
+	  Categorical -- onset\tabfnm{a}  &    100  &     0            &  196     \\
+	  Probabilistic                   &     80  &    20\tabfnm{*}  &  200     \\
+	  Categorical -- coda\tabfnm{b}   &      0  &   100\tabfnm{*}  &  196     \\ \midrule
+	  \end{tabular}
+	  \tablenote{All data are approximate.
+			  \tabfnt{a}Categorical may be onset.
+			  \tabfnt{b}Categorical may also be coda.
+			  \tabfnt{*}\textit{p} < .05.
+			  \tabfnt{**}\textit{p} < .01.
+		   }
+	\end{threeparttable}
+\end{table}
+
+Nam ultrices eu felis vel fringilla. Vestibulum pellentesque sem urna, eu fringilla quam sodales a. Vivamus suscipit sapien sit amet massa ultrices lacinia. Maecenas ac dignissim purus. Vivamus bibendum, felis semper consequat fringilla, nisi libero consequat eros, vitae varius justo libero feugiat mauris. Duis congue, ipsum et laoreet ultrices, tellus elit facilisis mi, at eleifend est ante nec dui. Quisque et pharetra magna, ac lobortis dolor. Aenean interdum quam vitae egestas venenatis. Mauris facilisis lacus eu lorem molestie rutrum. Vivamus porta dui vel sagittis bibendum. Nulla ullamcorper libero nec mauris convallis, a imperdiet odio congue. In dignissim ligula eget turpis finibus, in bibendum diam convallis. Duis pulvinar enim non dolor ornare consectetur. Mauris laoreet erat et massa suscipit, a faucibus neque eleifend. Fusce nec tellus a leo maximus imperdiet (Table \ref{tab:firsttable} and Appendix Table \ref{tab:apptable}).
 
 \begin{table}
 	\begin{center}
 		\caption{Your first table.}
-		\label{tab:table1}
+		\label{tab:firsttable}
 		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
 			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
 			$\alpha$ & $\beta$ & $\gamma$ \\
@@ -95,5 +118,24 @@ Integer sed ultricies ipsum. Cras et congue nunc. Lorem ipsum dolor sit amet, co
 
 % Print reference list
 \printbibliography
+
+\appendix
+
+\section{Online Appendix}
+
+\begin{table}
+	\begin{center}
+		\caption{An Appendix Table.}
+		\label{tab:apptable}
+		\begin{tabular}{l|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+			\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+			$\alpha$ & $\beta$ & $\gamma$ \\
+			\hline
+			1 & 1110.4 & a\\
+			2 & 10.3 & b\\
+			3 & 23.75234 & c\\
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \end{document}
